@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class BinaryTree {
     static class Node{
         int data;
@@ -35,7 +37,7 @@ public class BinaryTree {
         preorder(root.left);
         preorder(root.right);
     }
-    // traversing through a binary tree in inorder sequence using recursion,
+    // traversing through a binary tree in inorder sequence using recursion,             
     // Time complexity = O(n)
     public static void inorder(Node root){
         if (root == null){
@@ -55,6 +57,37 @@ public class BinaryTree {
         postorder(root.right);
         System.out.print(root.data+" ");
     }
+    // traversing through a binary tree in level order traversal,
+    // Time complexity = O(n)
+
+    public static void levelorder(Node root){
+        if (root == null){
+            return;
+        }
+        Queue<Node> q = new LinkedList<>();
+        q.add(root);
+        q.add(null);
+
+        while(!q.isEmpty()){
+            Node cur = q.remove();
+            if (cur==null){
+                System.out.println();
+                if(q.isEmpty()){
+                    break;
+                }else{
+                    q.add(null);
+                }
+            }else{
+                System.out.print(cur.data+" ");
+                if (cur.left != null) {
+                    q.add(cur.left);
+                }
+                if (cur.right != null){
+                    q.add(cur.right);
+                }
+            }
+        }
+    }
     public static void main(String[] args) {
         int nodes[] = {1, 2, 4, -1, -1, 5, -1, -1, 3, -1, 6, -1, -1};
         BuildBinaryTree tree = new BuildBinaryTree();
@@ -65,5 +98,7 @@ public class BinaryTree {
         inorder(root);
         System.out.println();
         postorder(root);
+        System.out.println();
+        levelorder(root);
     }
 }
