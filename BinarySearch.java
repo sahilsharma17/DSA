@@ -13,12 +13,11 @@ public class BinarySearch {
             }else{
                 System.out.println("Item you are searching for is not in the array.");
             }
-            }
-
         }
+    }
     
     public static void main(String[] args) {
-        int[] arr = new int[]{1,2,3,4,5,6};
+        int[] arr = new int[]{-1,0,3,5,9,12};
         int r = arr.length-1;
         int l = 0;
         BinarySearch(arr,l,r,4);
