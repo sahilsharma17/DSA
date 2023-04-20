@@ -152,7 +152,7 @@ public class BinaryTree {
         // preorder(root);
         // System.out.println();
 
-        // inorder(root);
+        inorder(root);
         // System.out.println();
 
         // postorder(root);
@@ -161,13 +161,13 @@ public class BinaryTree {
         // levelorder(root);
         // System.out.println();
 
-        System.out.println("Total number of nodes in the binary tree - "+countOfNodes(root));
+        //System.out.println("Total number of nodes in the binary tree - "+countOfNodes(root));
 
-        System.out.println("Sum of all node values in the binary tree - "+sumOfNodes(root));
+        //System.out.println("Sum of all node values in the binary tree - "+sumOfNodes(root));
 
-        System.out.println("Height of the binary tree - "+heightOfTree(root));
+        //System.out.println("Height of the binary tree - "+heightOfTree(root));
 
-        System.out.println("Diameter of the binary tree - "+diameter2(root).diameter);
+        //System.out.println("Diameter of the binary tree - "+diameter2(root).diameter);
 
     }
 }
